@@ -208,6 +208,10 @@ npx playwright install chromium
 npm run test:gui
 ```
 
+Releases are cut with the procedure in the
+[release guide](docs/RELEASING.md); the downloadable disk image is built and
+attested by GitHub Actions rather than on a developer machine.
+
 GUI tests exercise the actual frontend and Rust command layer through a test
 bridge, with native dialogs stubbed. The README screenshots use the same
 frontend and bridge with the repository's sample XML; they are not design
