@@ -409,7 +409,10 @@ let backend, browser, server;
   await openTableOptions();
   await page.locator('#opt-rows').selectOption('500');
   await page.locator('[data-scroll]').evaluate(e=>{e.scrollTop=e.scrollHeight;});
-  await page.locator('[data-highlight-row="0:499"]').click();
+  await page.waitForSelector('[data-highlight-row="0:499"]');
+  // Dispatched in page: a real click would scroll the virtualised container,
+  // and the scroll listener rewrites tbody, detaching the resolved row.
+  await page.locator('[data-highlight-row="0:499"]').evaluate(el => el.click());
   await page.locator('[data-duplicate]').click();
   await page.waitForSelector('[data-highlight-row="0:500"].row-selected');
   assert.equal((await invoke('document_info')).errors.length, 0);
