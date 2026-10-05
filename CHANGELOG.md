@@ -6,6 +6,8 @@ versions below 1.0.0.
 
 ## Unreleased
 
+## 0.1.4 - 2026-10-05
+
 ### Added
 
 - Release disk images are built by GitHub Actions and published with a signed
