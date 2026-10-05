@@ -6,6 +6,13 @@ versions below 1.0.0.
 
 ## Unreleased
 
+## 0.1.5 - 2026-10-05
+
+### Fixed
+
+- Release builds no longer fail intermittently while running the automated
+  interface tests, which could publish a release without its disk image.
+
 ## 0.1.4 - 2026-10-05
 
 ### Added
