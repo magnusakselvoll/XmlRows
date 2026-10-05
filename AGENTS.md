@@ -83,7 +83,8 @@ value in `README.md`, because verification with the old path will fail.
 Publishing changes external state. Only push, tag or create a GitHub Release
 when the user explicitly requests publication.
 
-When publication is requested:
+`docs/RELEASING.md` is the step-by-step runbook, including the commands. The
+numbered points below are the constraints that must hold regardless:
 
 1. Commit the final version, changelog and documentation before tagging.
 2. Create an annotated tag named `v<version>` on that exact release commit.
